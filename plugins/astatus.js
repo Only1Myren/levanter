@@ -20,7 +20,7 @@ bot({ on: 'text', fromMe: false, type: 'astatus' }, async (message, match) => {
 	) {
 		for (const reply of possibleReplies.split(',')) {
 			if (new RegExp(reply, 'i').test(message.text)) {
-				return await forwardOrBroadCast(message.jid, message, {
+				return await forwardOrBroadCast(message.jid, message, {send
 					quoted: message.data,
 				})
 			}
